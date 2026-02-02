@@ -1,0 +1,134 @@
+:root {
+    --box-border: #e0e0e0;
+    --box-shadow: rgba(0, 0, 0, 0.05);
+    --accent-color: #2c3e50;
+}
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.bento-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.bento-box {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 20px;
+    border: 1px solid var(--box-border);
+    box-shadow: 0 2px 8px var(--box-shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bento-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.bento-box h2 {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.bento-box h3 {
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.info-box {
+    text-align: center;
+}
+
+.info-box h1 {
+    color: var(--accent-color);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.info-box p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.tech-stack-box {
+    height: 100%;
+}
+
+.tech-category {
+    margin-bottom: 20px;
+}
+
+.tech-category:last-child {
+    margin-bottom: 0;
+}
+
+.tech-category h3 {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.tech-list {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.row-75-25 {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.col-75 {
+    flex: 0 0 calc(75% - 10px);
+}
+
+.col-25 {
+    flex: 0 0 calc(25% - 10px);
+}
+
+.row-50-50 {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.col-50 {
+    flex: 0 0 calc(50% - 10px);
+}
+
+@media (max-width: 768px) {
+    .row-75-25,
+    .row-50-50 {
+        flex-direction: column;
+    }
+
+    .col-75,
+    .col-25,
+    .col-50 {
+        flex: 0 0 100%;
+    }
+
+    .bento-box {
+        padding: 20px;
+    }
+}

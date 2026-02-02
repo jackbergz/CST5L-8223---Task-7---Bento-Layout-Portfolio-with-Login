@@ -1,0 +1,481 @@
+/* ============================================
+   CSS VARIABLES
+   ============================================ */
+:root {
+  --box-border: #e0e0e0;
+  --box-shadow: rgba(0, 0, 0, 0.05);
+  --accent-color: #2c3e50;
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+.bento-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.education-tech-container {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  height: 1016px;
+}
+
+.education-hobbies-container {
+  flex: 0 0 calc(75% - 8px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tech-stack-container {
+  flex: 0 0 calc(25% - 8px);
+}
+
+.certificates-projects-container {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.certificates-container,
+.projects-container {
+  flex: 0 0 calc(50% - 8px);
+}
+
+/* ============================================
+   BENTO BOX (Base Component)
+   ============================================ */
+.bento-box {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 16px;
+  border: 1px solid var(--box-border);
+  box-shadow: 0 2px 8px var(--box-shadow);
+  transition: box-shadow 0.2s ease;
+  overflow: hidden;
+}
+
+.bento-box:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.bento-box h2 {
+  color: var(--accent-color);
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bento-box h2 i {
+  color: #000;
+  font-size: 1.1rem;
+}
+
+.bento-box h3 {
+  color: var(--accent-color);
+  font-size: 1rem;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.bento-box p {
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+.bento-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================
+   HEADER SECTION (Profile Info)
+   ============================================ */
+.info-container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  text-align: left;
+  height: 180px;
+}
+
+.info-container h1 {
+  color: var(--accent-color);
+  font-size: 2rem;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.info-container .title {
+  color: #666;
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.info-container .location {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+/* Profile Image */
+.profile-section {
+  flex-shrink: 0;
+}
+
+.profile-image {
+  width: 130px;
+  height: 130px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 3px solid var(--box-border);
+}
+
+.info-section {
+  flex: 1;
+}
+
+/* Contact Links */
+.contact-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background-color: #f8f9fa;
+  border: 1px solid var(--box-border);
+  border-radius: 8px;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.contact-btn i {
+  color: #000;
+  font-size: 1rem;
+}
+
+.contact-btn:hover {
+  background-color: #e9ecef;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #1a252f;
+}
+
+/* ============================================
+   ABOUT SECTION
+   ============================================ */
+.about-container {
+  height: 220px;
+}
+
+/* ============================================
+   TECH STACK SECTION
+   ============================================ */
+.tech-stack-box {
+  height: 100%;
+}
+
+.tech-stack-container .bento-box {
+  margin-bottom: 0;
+  height: 100%;
+}
+
+.tech-category {
+  margin-bottom: 16px;
+}
+
+.tech-category:last-child {
+  margin-bottom: 0;
+}
+
+.tech-category h3 {
+  font-size: 0.88rem;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tech-tag {
+  display: inline-block;
+  padding: 5px 12px;
+  background-color: #f8f9fa;
+  border: 1px solid var(--box-border);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: #333;
+  transition: all 0.2s ease;
+}
+
+.tech-tag:hover {
+  background-color: #e9ecef;
+  transform: translateY(-1px);
+}
+
+/* ============================================
+   EDUCATION SECTION
+   ============================================ */
+.education-hobbies-container .bento-box {
+  margin-bottom: 0;
+}
+
+.education-container {
+  height: 400px;
+}
+
+.education-item {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.education-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.education-details {
+  color: #888;
+  font-size: 0.82rem;
+  margin-bottom: 6px;
+}
+
+.education-desc {
+  color: #666;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+/* ============================================
+   CERTIFICATES SECTION
+   ============================================ */
+.certificates-container .bento-box {
+  height: 550px;
+}
+
+.cert-item {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.cert-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.cert-details {
+  color: #888;
+  font-size: 0.82rem;
+  margin-bottom: 6px;
+}
+
+/* ============================================
+   PROJECTS SECTION
+   ============================================ */
+.projects-container .bento-box {
+  height: 550px;
+}
+
+.project-card {
+  background-color: #f8f9fa;
+  border: 1px solid var(--box-border);
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 12px;
+  transition: all 0.2s ease;
+}
+
+.project-card:last-of-type {
+  margin-bottom: 16px;
+}
+
+.project-card:hover {
+  background-color: #e9ecef;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.project-card h3 {
+  margin-bottom: 8px;
+}
+
+.project-card p {
+  font-size: 0.88rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.project-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  color: #555;
+}
+
+/* ============================================
+   HOBBIES SECTION
+   ============================================ */
+.hobbies-container {
+  height: 600px;
+}
+
+.hobby-card {
+  background-color: #f8f9fa;
+  border: 1px solid var(--box-border);
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 10px;
+  transition: all 0.2s ease;
+}
+
+.hobby-card:last-of-type {
+  margin-bottom: 0;
+}
+
+.hobby-card:hover {
+  background-color: #e9ecef;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.hobby-card h3 {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+.hobby-card p {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0;
+}
+
+/* ============================================
+   SHARED COMPONENTS
+   ============================================ */
+.view-all-btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 16px;
+  background-color: transparent;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.view-all-btn:hover {
+  background-color: #f8f9fa;
+  color: #1a252f;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+  text-align: center;
+  padding: 24px 20px;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 768px) {
+  .info-container {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+  }
+
+  .info-container h1 {
+    font-size: 1.75rem;
+  }
+
+  .about-container {
+    height: auto;
+  }
+
+  .profile-image {
+    width: 110px;
+    height: 110px;
+  }
+
+  .contact-links {
+    justify-content: center;
+  }
+
+  .education-tech-container,
+  .certificates-projects-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .education-hobbies-container,
+  .tech-stack-container,
+  .certificates-container,
+  .projects-container {
+    flex: 0 0 100%;
+  }
+
+  .education-container,
+  .hobbies-container,
+  .tech-stack-container .bento-box,
+  .certificates-container .bento-box,
+  .projects-container .bento-box {
+    height: auto;
+  }
+
+  .bento-box {
+    padding: 18px;
+  }
+}
