@@ -14,23 +14,23 @@ body {
 body::before {
     content: '';
     position: absolute;
-    width: 600px;
-    height: 600px;
+    width: 450px;
+    height: 450px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-    top: -200px;
-    right: -200px;
+    top: -150px;
+    right: -150px;
 }
 
 body::after {
     content: '';
     position: absolute;
-    width: 500px;
-    height: 500px;
+    width: 380px;
+    height: 380px;
     background: rgba(13, 139, 217, 0.3);
     border-radius: 50%;
-    bottom: -150px;
-    left: -150px;
+    bottom: -120px;
+    left: -120px;
 }
 
 .title {
@@ -38,21 +38,21 @@ body::after {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-size: 44px;
+    font-size: 34px;
     font-weight: 700;
     letter-spacing: -1px;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
     text-align: center;
     position: relative;
     z-index: 1;
 }
 
 .form {
-    width: 520px;
+    width: 400px;
     background: rgba(255, 255, 255, 0.98);
-    padding: 60px 55px;
-    border-radius: 24px;
-    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.12);
+    padding: 40px 35px;
+    border-radius: 18px;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.12);
     text-align: left;
     position: relative;
     z-index: 1;
@@ -60,23 +60,23 @@ body::after {
 
 .label {
     display: block;
-    margin-top: 28px;
-    margin-bottom: 12px;
+    margin-top: 20px;
+    margin-bottom: 8px;
     color: #4a5568;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
 }
 
 .input {
     width: 100%;
-    padding: 18px 22px;
+    padding: 14px 16px;
     margin-top: 0;
-    font-size: 17px;
+    font-size: 15px;
     background: #ffffff;
     border: 2px solid #e2e8f0;
-    border-radius: 14px;
+    border-radius: 10px;
     color: #2d3748;
     box-sizing: border-box;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -91,21 +91,21 @@ body::after {
     outline: none;
     border-color: #1da1f2;
     background: #ffffff;
-    box-shadow: 0 0 0 4px rgba(29, 161, 242, 0.15);
+    box-shadow: 0 0 0 3px rgba(29, 161, 242, 0.15);
     transform: translateY(-2px);
 }
 
 .btn {
     display: block;
     width: 100%;
-    margin: 40px auto 0;
-    padding: 18px;
+    margin: 30px auto 0;
+    padding: 14px;
     background: linear-gradient(135deg, #1da1f2 0%, #0d8bd9 100%);
     color: white;
     border: none;
-    border-radius: 14px;
+    border-radius: 10px;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 4px 12px rgba(29, 161, 242, 0.25);
@@ -125,10 +125,10 @@ body::after {
 }
 
 .text {
-    margin-top: 35px;
+    margin-top: 25px;
     text-align: center;
     color: #718096;
-    font-size: 17px;
+    font-size: 15px;
 }
 
 .link {
